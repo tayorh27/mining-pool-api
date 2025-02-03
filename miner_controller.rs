@@ -31,5 +31,6 @@ pub async fn get_miner() -> HttpResponse {
 //Create new Miner
 #[post("/wallet/{id}/miners")]
 pub async fn create_miner(miner_request: Json<NewMinerRequest>) -> HttpResponse {
-    let miners: Vec<Miner> = Vec![];
+    let miner: Vec<Miner> = Vec![];
+    ResponseType::Created(miner).get_response()
 }
